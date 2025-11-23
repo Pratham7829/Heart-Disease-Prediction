@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="left">
+            <h1 class="heading">
+                AI Powered <span>Heart Disease</span> Predictor
+            </h1>
+
+            <p class="subtext">
+                Get instant analysis of your heart condition using machine learning.
+            </p>
+
+            <div class="heartbeat-container">
+                <svg class="heartbeat" viewBox="0 0 100 20">
+                    <polyline points="0,10 20,10 25,4 30,16 35,10 55,10 60,4 65,16 70,10 100,10"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="right">
+            <img class="doctor-img" 
+            src="../heart-and-heartbeat-ai-generated-free-png.webp"
+            alt="Doctor">
+        </div>
+
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="predict-section" id="predict-section">
+
+        <div class="predict-inner bootstrap-layout">
+
+            <!-- LEFT SIDE: CLEAN BOOTSTRAP-LIKE FORM -->
+            <div class="form-column">
+                <h2 class="form-main-title">Patient Details</h2>
+
+                <form id="predictForm" class="bs-form">
+
+                    <div class="bs-group">
+                        <label>Age</label>
+                        <input type="number" class="bs-input" name="age" placeholder="54" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Sex</label>
+                        <input type="number" class="bs-input" name="sex" placeholder="1 = Male, 0 = Female" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Chest Pain Type</label>
+                        <input type="number" class="bs-input" name="cp" placeholder="0 - 3" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Resting BP</label>
+                        <input type="number" class="bs-input" name="trestbps" placeholder="mm Hg" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Cholesterol</label>
+                        <input type="number" class="bs-input" name="chol" placeholder="mg/dl" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Fasting Blood Sugar</label>
+                        <input type="number" class="bs-input" name="fbs" placeholder="1 = True, 0 = False" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Rest ECG</label>
+                        <input type="number" class="bs-input" name="restecg" placeholder="0 - 2" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Max Heart Rate</label>
+                        <input type="number" class="bs-input" name="thalach" placeholder="150" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Exercise Angina</label>
+                        <input type="number" class="bs-input" name="exang" placeholder="1 = Yes, 0 = No" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Oldpeak</label>
+                        <input type="number" step="0.1" class="bs-input" name="oldpeak" placeholder="ST Depression" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Slope</label>
+                        <input type="number" class="bs-input" name="slope" placeholder="0 - 2" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>CA Count</label>
+                        <input type="number" class="bs-input" name="ca" placeholder="0 - 4" required>
+                    </div>
+
+                    <div class="bs-group">
+                        <label>Thal</label>
+                        <input type="number" class="bs-input" name="thal" placeholder="0 - 3" required>
+                    </div>
+
+                    <button type="submit" class="bs-btn">Run Prediction</button>
+
+                    <div id="result"></div>
+
+                </form>
+            </div>
+
+            <!-- RIGHT SIDE CONTENT -->
+            <div class="predict-left shifted-right">
+                <span class="pill">Smart Health • ML Powered</span>
+                <h2 style="color: #fff;">Check your <span>heart risk</span> in seconds</h2>
+
+                <p>
+                    Enter basic clinical details and our KNN-based model will estimate
+                    the chance of heart disease. This is for educational purposes only
+                    and does not replace a doctor’s diagnosis.
+                </p>
+
+                <ul class="features">
+                    <li>⚡ Instant prediction</li>
+                    <li>🧠 Trained on clinical dataset</li>
+                    <li>🔐 Data stays on your device</li>
+                </ul>
+
+                <div class="illustration-wrap">
+                    <img class="heart-image"
+                        src="../heart-and-heartbeat-ai-generated-free-png.webp"
+                        alt="Heart Illustration">
+                    <div class="glow-circle"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
